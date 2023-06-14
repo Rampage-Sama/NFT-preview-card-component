@@ -144,6 +144,7 @@ body {
 .flex-group {
   display: flex;
   justify-content: space-between;
+  font-weight: var(--fw-norm);
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
