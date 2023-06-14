@@ -181,7 +181,8 @@ body {
 }
 
 .creator__image {
-  border-radius: 1px solid var(--title-text);
+  border: 1px solid var(--title-text);
+  border-radius: 50%;
   width: 25px;
 }
 
