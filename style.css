@@ -101,7 +101,6 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  background-color: var(--eth-text);
 }
 
 .container:hover .ntf__image {
