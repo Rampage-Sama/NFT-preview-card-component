@@ -1,0 +1,219 @@
+:root {
+    --text-clr: hsl(215, 51%, 70%);
+    --eth-text: hsl(178, 100%, 50%);
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-clr: hsl(215, 32%, 27%);
+    --title-text: hsl(0, 0%, 100%);
+
+    --fs-font: 18px;
+    --ff-font: 'Outfit', sans-serif;
+    --fw-norm: 300;
+    --fw-semi: 400;
+    --fw-bold: 600;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* Global styles */
+body {
+  background-color: var(--main-bg);
+  color: var(--title-text);
+  font-family: var(--ff-font);
+  font-size: var(--fs-font);
+  font-weight: var(--fw-semi);
+}
+
+/* Component styles */
+.component {
+  display: block;
+  align-items: center;
+  margin: auto;
+  padding-top: 5rem;
+  width: 38vh;
+}
+
+/* Card styles */
+.nft__card {
+  display: block;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 1px 15px 1px 10px var(--line-clr);
+}
+
+/* Image styles */
+.ntf__image {
+  border-radius: 1rem;
+  opacity: 1;
+  transition: .5 ease;
+  backface-visibility: hidden;
+}
+
+/* Container styles */
+.container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--eth-text);
+}
+
+.container:hover .ntf__image {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.container:hover .transparent {
+  opacity: 1;
+}
+
+/* Transparency effect */
+.transparent {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Title */
+.title {
+  padding-top: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.title:hover {
+  cursor: pointer;
+  color: var(--eth-text);
+}
+
+/* Product description */
+.product__descr {
+  padding-top: 1rem;
+  color: var(--text-clr);
+  font: var(--fw-norm);
+}
+
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.ethereum {
+  display: inline;
+  color: var(--eth-text);
+}
+
+.ethereum svg {
+  display: inline;
+  margin-right: .5rem;
+}
+
+.days {
+  display: inline;
+  color: var(--text-clr);
+}
+
+.days svg {
+  display: inline;
+  margin-right: .5rem;
+}
+
+.line {
+  border: 1px solid var(--line-clr);  
+}
+
+/* Creator styles */
+.creator {
+  display: flex;
+  gap: .875rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.creator__image {
+  border-radius: 1px solid var(--title-text);
+  width: 25px;
+}
+
+.creator__of {
+  display: flex;
+  color: var(--text-clr);
+  gap: .5rem;
+}
+
+.creator__of p {
+  display: flex;
+  color: var(--title-text);
+  gap: .5rem;
+}
+
+.creator__of p:hover {
+  cursor: pointer;
+  color: var(--eth-text);
+}
+
+/* Attribution styles */
+.attribution {
+  color: var(--text-clr);
+  padding-top: 1.5rem;
+}
+
+.attribution a {
+    color: var(--eth-text);
+}
+
+.attribution a:hover {
+  color: var(--title-text);
+}
